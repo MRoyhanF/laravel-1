@@ -44,5 +44,68 @@ class StudentController extends Controller
         // Student::find(27)->delete();
 
         // dd($student);
+
+
+        // collection
+        // $nilai = [9,6,5,5,8,14,5,16,10,5,2,1,6,7,2];
+
+        // //php biasa
+        // 1. hitung jumlah nilai
+        // 2. hitung berapa banyak nilai
+        // 3. hitung nilai rata-rata
+        // $countNilai = count($nilai);
+        // $totalNilai = array_sum($nilai);
+        // $nilaiRataRata = $totalNilai / $countNilai;
+
+        // //collection
+        // 1. hitung rata-rata nilai
+        // $nilaiRataRata = collect($nilai)->avg();
+
+        // // kita akan mencari tau hasil dari nilai dikali 2 dari data2 yuang ada di array $nilai
+        // // php biasa
+        // $nilaiKaliDua = [];
+        // foreach ($nilai as $value) {
+        //     array_push($nilaiKaliDua, $value * 2);
+        // }
+        // dd($nilaiKaliDua);
+
+        // // method map
+        // $aaa = collect($nilai)->map(function ($value){
+        //     return $value * 2;
+        // })->all();
+        // dd($aaa);
+
+        // // method filter
+        // $aaa = collect($nilai)->filter(function ($value) {
+        //     return $value > 7;
+        // })->all();
+        // dd($aaa);
+
+        // //method contains = cek apakah sebuah array memiliki sesuatu
+            // $aa = collect($nilai)->contains(10);
+            // $aa = collect($nilai)->contains(function ($value) {
+            //     return $value < 6;
+            // });
+        // dd($aa);
+
+        // //method diff()
+        // $resturantA = ["burger", "siomay", "pizza", "spaghetti", "makaroni", "martabak", "bakso"];
+        // $resturantB = ["pizza", "friend chicken", "martabak", "sayur asem", "pecel lele", "bakso"];
+
+        // $menuRestoA = collect($resturantA)->diff($resturantB);
+        // $menuRestoB = collect($resturantB)->diff($resturantA);
+
+        // dd($menuRestoB);
+
+        // // method pluck
+        // $biodata = [
+        //     ['nama' => 'budi', 'umur' => 17],
+        //     ['nama' => 'anti', 'umur' => 16],
+        //     ['nama' => 'siti', 'umur' => 17],
+        //     ['nama' => 'rudi', 'umur' => 20],
+        // ];
+
+        // $aaaa = collect($biodata)->pluck('nama')->all();
+        // dd($aaaa);
     }
 }
