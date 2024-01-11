@@ -10,7 +10,8 @@ class StudentController extends Controller
 {
     public function index()
     {
-        $student = Student::all();
+        // $student = Student::all();  //lazy loading
+        $student = Student::with('class')->get(); //eager loading
         return view('student', ['studentList' => $student]);
 
         // // query builder

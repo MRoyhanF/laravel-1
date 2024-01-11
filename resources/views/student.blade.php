@@ -11,6 +11,7 @@
                 <th>Name</th>
                 <th>Gender</th>
                 <th>NIS</th>
+                <th>Class</th>
             </tr>
         </thead>
         <tbody>
@@ -20,6 +21,7 @@
                 <td>{{$data->name}}</td>
                 <td>{{$data->gender}}</td>
                 <td>{{$data->nis}}</td>
+                <td>{{$data->class['name']}}</td>
             </tr>   
             @endforeach
         </tbody>
