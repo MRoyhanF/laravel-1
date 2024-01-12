@@ -14,7 +14,7 @@ class StudentController extends Controller
         // $student = Student::all();  
         
         //eager loading
-        $student = Student::with('class')->get(); 
+        $student = Student::with(['class', 'extracurriculars'])->get(); 
         return view('student', ['studentList' => $student]);
 
         // // query builder

@@ -4,6 +4,7 @@
 @section('content')
     <h1>Ini Halaman Student</h1>
     <h3>Student List</h3>
+
     <table class="table">
         <thead>
             <tr>
@@ -12,6 +13,7 @@
                 <th>Gender</th>
                 <th>NIS</th>
                 <th>Class</th>
+                <th>Extracurricular</th>
             </tr>
         </thead>
         <tbody>
@@ -22,6 +24,11 @@
                 <td>{{$data->gender}}</td>
                 <td>{{$data->nis}}</td>
                 <td>{{$data->class['name']}}</td>
+                <td>
+                    @foreach ($data->extracurriculars as $item)
+                        - {{$item->name}}<br>
+                    @endforeach
+                </td>
             </tr>   
             @endforeach
         </tbody>
